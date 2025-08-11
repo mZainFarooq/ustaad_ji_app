@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import './core/theme/app_theme.dart';
 import './core/theme/theme_provider.dart';
+import './core/routes/app_routes.dart';
+import './core/constants/app_route_names.dart';
 
 void main() {
   runApp(
@@ -24,33 +26,8 @@ class MyApp extends StatelessWidget {
       theme: AppTheme.lightTheme,
       darkTheme: AppTheme.darkTheme,
       themeMode: themeProvider.themeMode,
-      home: const HomeScreen(),
-    );
-  }
-}
-
-class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    final themeProvider = Provider.of<ThemeProvider>(context);
-
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text("Theme Toggler"),
-        actions: [
-          Switch(
-            value: themeProvider.themeMode == ThemeMode.dark,
-            onChanged: (value) {
-              themeProvider.toggleTheme(value);
-            },
-          ),
-        ],
-      ),
-      body: const Center(
-        child: Text("Toggle the theme from the switch in AppBar"),
-      ),
+      initialRoute: AppRouteNames.phoneNumber,
+      routes: AppRoutes.routes,
     );
   }
 }
