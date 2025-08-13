@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import '../../widgets/custom_app_bar.dart';
-import '../../widgets/custom_bottom_navigation_bar.dart';
 
 class ServicesScreen extends StatelessWidget {
   const ServicesScreen({super.key});
@@ -20,32 +19,6 @@ class ServicesScreen extends StatelessWidget {
             ),
           ],
         ),
-      ),
-      bottomNavigationBar: CustomBottomNavigationBar(
-        currentIndex: 1,
-        onTap: (index) {
-          String routeName;
-          switch (index) {
-            case 0:
-              routeName = '/home';
-              break;
-            case 1:
-              routeName = '/services';
-              break;
-            case 2:
-              routeName = '/complaints';
-              break;
-            case 3:
-              routeName = '/profile';
-              break;
-            default:
-              routeName = '/home';
-          }
-
-          if (ModalRoute.of(context)?.settings.name != routeName) {
-            Navigator.pushReplacementNamed(context, routeName);
-          }
-        },
       ),
     );
   }

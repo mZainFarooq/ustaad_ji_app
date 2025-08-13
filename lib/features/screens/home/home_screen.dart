@@ -60,10 +60,10 @@ class HomeScreen extends StatelessWidget {
               routeName = '/home';
               break;
             case 1:
-              routeName = '/services';
+              routeName = '/complaints';
               break;
             case 2:
-              routeName = '/complaints';
+              routeName = '/notifications';
               break;
             case 3:
               routeName = '/profile';

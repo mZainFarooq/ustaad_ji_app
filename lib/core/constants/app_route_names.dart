@@ -1,4 +1,5 @@
 class AppRouteNames {
+  static const String splash = '/splash';
   static const String phoneNumber = '/';
   static const String otp = '/otp';
   static const String createProfile = '/create-profile';
@@ -6,4 +7,5 @@ class AppRouteNames {
   static const String services = '/services';
   static const String complains = '/complaints';
   static const String profile = '/profile';
+  static const String notification = '/notifications';
 }

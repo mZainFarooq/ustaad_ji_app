@@ -40,7 +40,7 @@ class _OtpScreenState extends State<OtpScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const CustomAppBar(title: "OTP Verification"),
+      appBar: const CustomAppBar(title: "OTP Verification", isBackAction: true),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 40),
         child: Column(

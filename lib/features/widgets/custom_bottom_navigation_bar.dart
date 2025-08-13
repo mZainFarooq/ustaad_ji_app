@@ -21,14 +21,14 @@ class CustomBottomNavigationBar extends StatelessWidget {
     final items = [
       {'icon': Icons.home, 'label': 'Home', 'route': '/home'},
       {
-        'icon': Icons.miscellaneous_services,
-        'label': 'Services',
-        'route': '/services',
-      },
-      {
         'icon': Icons.report_problem,
         'label': 'My Complaints',
         'route': '/complaints',
+      },
+      {
+        'icon': Icons.notifications,
+        'label': 'Notifications',
+        'route': '/notifications',
       },
       {'icon': Icons.person, 'label': 'Profile', 'route': '/profile'},
     ];

@@ -269,6 +269,7 @@ class _MyComplainScreenState extends State<MyComplainScreen>
               controller: _tabController,
               children: [
                 ListView.builder(
+                  physics: const BouncingScrollPhysics(),
                   itemCount: pendingComplaints.length,
                   itemBuilder:
                       (context, index) =>
@@ -288,7 +289,7 @@ class _MyComplainScreenState extends State<MyComplainScreen>
         ],
       ),
       bottomNavigationBar: CustomBottomNavigationBar(
-        currentIndex: 2,
+        currentIndex: 1,
         onTap: (index) {
           String routeName;
           switch (index) {
@@ -296,10 +297,10 @@ class _MyComplainScreenState extends State<MyComplainScreen>
               routeName = '/home';
               break;
             case 1:
-              routeName = '/services';
+              routeName = '/complaints';
               break;
             case 2:
-              routeName = '/complaints';
+              routeName = '/notifications';
               break;
             case 3:
               routeName = '/profile';

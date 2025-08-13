@@ -27,7 +27,7 @@ class _CreateProfileScreenState extends State<CreateProfileScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const CustomAppBar(title: "Create Profile"),
+      appBar: const CustomAppBar(title: "Create Profile", isBackAction: true),
       body: Padding(
         padding: const EdgeInsets.all(24),
         child: SingleChildScrollView(
